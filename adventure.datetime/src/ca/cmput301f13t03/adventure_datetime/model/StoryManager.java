@@ -264,6 +264,8 @@ public final class StoryManager implements IStoryModelPresenter,
 
 	public boolean putStory(Story story) {
 		// Set default image if needed
+		if(story == null)
+			return false;
 		if (story.getThumbnail() == null)
 			story.setThumbnail(BitmapFactory.decodeResource(
 					m_context.getResources(), R.drawable.logo));
