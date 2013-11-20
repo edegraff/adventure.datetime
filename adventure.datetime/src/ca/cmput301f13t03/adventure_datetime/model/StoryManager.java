@@ -302,7 +302,7 @@ public final class StoryManager implements IStoryModelPresenter,
 		boolean result = m_db.setStoryFragment(fragment);
 		if(result)
 		{
-			result = m_db.setStory(m_currentStory);
+			result = putStory(m_currentStory);
 			
 			PublishAllFragmentsChanged();
 		}
